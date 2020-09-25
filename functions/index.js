@@ -9,11 +9,11 @@
 const functions = require('firebase-functions');
 const express = require('express');
 var admin = require("firebase-admin");
-var serviceAccount = require("./myfirebase-f82d7-firebase-adminsdk-w4bhh-da72af714b.json");
+var serviceAccount = require("./myfirebase.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://myfirebase-f82d7.firebaseio.com"
+  databaseURL: "https://firebase.firebaseio.com"
 });
 
 const db = admin.firestore();
